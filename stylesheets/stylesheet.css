@@ -15,7 +15,7 @@ body {
 
 .title {
   font-size: 17;
-  font-family: Liberation Mono;}
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }  
   .title:hover {
     opacity: 0.75; }
   .title span {

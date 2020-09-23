@@ -15,7 +15,7 @@ body {
 
 .title {
   font-size: 17;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }  
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; }
   .title:hover {
     opacity: 0.75; }
   .title span {
@@ -173,28 +173,40 @@ body {
     margin: 0;
     border: 5px solid white;
     object-fit: cover; }
-ff2600
-.dropdown {
-  position: relative; }
 
-  .dropdown:hover .dropdown-list {
-    display: block; }
-  .dropdown-list {
-    display: none;
-    position: absolute;
-    min-width: 170;
-    background-color: #272d33;
-    border-radius: 12px;
-    padding: 8px;}
-    .dropdown-list a {
-      display: block;
-      padding: 5px 10px;
-      font-size: 18px;
-      font-weight: 400;
-      color: rgb(255, 255, 255);
-      text-decoration: none; }
-      .dropdown-list a:hover {
-        color: #4169E1; }
+    .dropdown {
+      position: relative; }
+      .dropdown:hover .dropdown-list {
+        display: block; }
+      .dropdown-list {
+        display: none;
+        position: absolute;
+        left: 0;
+        min-width: 160px;
+        background-color: #2e3338;
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 10px 0 20px rgba(0, 0, 0, 0.2);
+        z-index: 4; }
+        .dropdown-list::before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          background-color: #2e3338;
+          border-top-left-radius: 3px; }
+        .dropdown-list a {
+          display: block;
+          padding: 5px 10px;
+          font-size: 16px;
+          font-weight: 500;
+          color: white;
+          text-decoration: none; }
+          .dropdown-list a:hover {
+            color: #ff2600; }
 
 
 .menu {
@@ -276,12 +288,11 @@ ff2600
         margin-bottom: 3em;
         margin-bottom: 1.50em;} }
 
-        table{
-          width: 98%;
-          text-align: left;
-          border-collapse: collapse;
-          margin: 1em 1% 1em 1%;
-        }
-        th{
-          border: 1px solid grey;
-          padding: 0.7em;
+table{
+  width: 98%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 1em 1% 1em 1%;}
+th{
+  border: 1px solid grey;
+  padding: 0.7em;

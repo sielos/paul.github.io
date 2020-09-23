@@ -174,26 +174,39 @@ body {
     border: 5px solid white;
     object-fit: cover; }
 
-.dropdown {
-  position: relative; }
-  .dropdown:hover .dropdown-list {
-    display: block; }
-  .dropdown-list {
-    display: none;
-    position: absolute;
-    min-width: 170;
-    background-color: #272d33;
-    border-radius: 12px;
-    padding: 8px;}
-    .dropdown-list a {
-      display: block;
-      padding: 5px 10px;
-      font-size: 18px;
-      font-weight: 400;
-      color: rgb(255, 255, 255);
-      text-decoration: none; }
-      .dropdown-list a:hover {
-        color: #4169E1; }
+    .dropdown {
+      position: relative; }
+      .dropdown:hover .dropdown-list {
+        display: block; }
+      .dropdown-list {
+        display: none;
+        position: absolute;
+        left: 0;
+        min-width: 160px;
+        background-color: #2e3338;
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 10px 0 20px rgba(0, 0, 0, 0.2);
+        z-index: 4; }
+        .dropdown-list::before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          background-color: #2e3338;
+          border-top-left-radius: 3px; }
+        .dropdown-list a {
+          display: block;
+          padding: 5px 10px;
+          font-size: 16px;
+          font-weight: 500;
+          color: white;
+          text-decoration: none; }
+          .dropdown-list a:hover {
+            color: #ff2600; }
 
 
 .menu {
@@ -223,6 +236,17 @@ body {
     background-color: white; }
     .site-navigation-item:hover .menu .menu-item, .site-navigation-item:hover .menu .menu-item::before, .site-navigation-item:hover .menu .menu-item::after {
       background-color: #4169E1; }
+
+.site-navigation-item.active{
+  color: #ff2600; }
+  .site-navigation-item.active::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ff2600; }
 
 .mde {
   display: flex;

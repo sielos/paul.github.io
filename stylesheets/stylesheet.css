@@ -5,6 +5,7 @@ a:active, a:hover {
 
 div{
   onclick="";
+  content: '';
 }
 
 html {

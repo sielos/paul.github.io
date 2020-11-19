@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--This page was produced by Paulius Karpavicius -->
+<!--indextitle="The fourth floor of the Diamond" -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The web assignment 1" />
+  <meta name="author" content="Paulius Karpavicius" />
+  <title>Sielos  |  Contacts</title>
+  <link rel="stylesheet" href="stylesheets/reset.css">
+  <link rel="stylesheet" href="stylesheets/stylesheet.css">
+</head>
+
+<body>
+  <header>
+
+      <!-- creates a red orange rectangle for aesthetically pleasing design, it deliberately does not contain any text, as it is only a design element-->
+      <h1 id="rectangle"></h1>
+
+      <!-- creates grey brackets around white text for aesthetically pleasing design-->
+      <h1><span class="brackets">{</span> <a href="./index.html">Diamond</a> <span class="brackets">}</span></h1>
+
+      <!-- uses unordered list to make a navigation element. It was used since it is easy to implement and suits the website -->
+      <nav>
+        <ul>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <h2>Contact information</h2>
+      <h3 class="smooth">Here I provide my contact details: my email, phone number and adress.</h3>
+      <hr>
+  </header>
+  <main>
+
+    <!-- creates two div elements for each column for desktop environment -->
+    <!-- creates a table to put contact information. -->
+    <div>
+      <h3>I prefer using email to phone, so please consider it, unless it is something urgent!</h3>
+      <table>
+        <tr>
+          <th>Email</th>
+          <th>pkarpavicius1@sheffield.ac.uk</th>
+        </tr>
+        <tr>
+          <th>Phone number</th>
+          <th>+44 7541 321402</th>
+        </tr>
+        <tr>
+          <th>Adress</th>
+          <th>Clarkehouse road</th>
+        </tr>
+      </table>
+    </div>
+
+    <!-- creates a form for users to sent comments about the website. The emails will be delivered to my university e-mail -->
+    <!-- uses "A Free Product of Matt's Script Archive, Inc. Copyright 1995 - 2009 Matt Wright Version 1.93 - Released June 25, 2009" -->
+    <div>
+      <form name="myForm" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+        <input type="hidden" name="recipient" value="pkarpavicius1@sheffield.ac.uk">
+          <label for="email">Your e-mail:</label>
+          <input type="email" name="email" placeholder="type your email..." required>
+        <p>
+          <label>Your comment:</label>
+          <textarea name="text" placeholder="type your comment..." rows="10"></textarea>
+        </p>
+        <p>
+          <input type=hidden name="subject" value="Comment regarding Your website">
+          <input class="input-box" type="submit" value="Submit">
+          <input class="input-box" type="reset">
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- creates a blue line in the footer and states who is the author of the website -->
+   <footer>
+     <hr id="line">
+     &copy; Paulius Karpavicius, 2019
+   </footer>
+
+</body>
+
+</html>

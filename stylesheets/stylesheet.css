@@ -1,0 +1,296 @@
+/**
+* This stylesheet has been created by: Paulius Karpavcius.
+*/
+
+/**
+* min-width is set to 370px to make sure website will
+* work properly for small phones (e.g. quiz page)
+*/
+html{
+  min-width: 370px;
+}
+body{
+  background-color: white;
+  font-family: "Open Sans",sans-serif;
+  line-height:  normal;
+}
+
+/**
+* display is set to flex and flex-diretion to column to follow flex-box layout,
+* so that in mobile environment information will be provided in column and
+* in desktop environment it will displayed in a row.
+*/
+ main{
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+ }
+ footer{
+   text-align: center;
+ }
+h2, h3{
+    margin: 1em 1.25em 1em 1.25em;
+    text-align: center;
+}
+h2{
+  font-weight: bold;
+  font-size: 125%;
+}
+h4{
+  padding-top: 0.67em;
+  font-weight: bold;
+  font-size: 400%;
+}
+#image{
+  width: 10px;
+  border-radius: 50%;
+}
+/**
+* position is set to relative, in order to be in front of red orange rectangle,
+* (see #rectangle).
+*/
+h1{
+  position: relative;
+  background-color: black;
+  font-size: 125%;
+  color: white;
+  padding: 0.9em 1.5em 0.9em 1.5em;
+  margin: 1em 1em 0 1em;
+}
+.smooth{
+  color: grey;
+  text-align: center;
+}
+
+/**
+* makes the brackets color to grey, this is only used for design purposes.
+*/
+.brackets{
+  color: grey;
+}
+.input-box{
+  width:80px
+}
+main h3{
+  text-align: left;
+}
+/**
+* creates a red orange line used for design purposes or to separate text/images.
+*/
+hr{
+  color: rgb(255,69,0);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/**
+* li and ul are used to create a menu (navigation area) that is inline.
+*/
+li{
+  display: inline;
+}
+ul {
+  font-size: 1em;
+  list-style-type: none;
+  margin: 0 1.25em auto 1.25em;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(51, 51, 51);
+}
+
+/**
+* float: left, ensures that navigation links are inline and on the left side.
+*/
+li {
+  float: left;
+}
+
+/**
+* displays each navigation links as blocks, in order to appear more
+* aesthetically pleasing and easier to click on, while discarding usual link
+* appearance (underline, purple color, etc.).
+*/
+li a {
+  display: block;
+  color: rgb(242, 242, 242);
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+
+/**
+* when hovered ensures that text will apear grey.
+*/
+li a:hover {
+  background-color: rgb(218, 218, 218);
+  color: black;
+}
+
+/**
+* removes usuall link appearance (underline, purple color, etc.) for every link.
+*/
+a:link{
+  text-decoration: none;
+  color: black;
+}
+
+/**
+* changes text color of a link to white
+*/
+h1 a:visited{
+  color: white;
+}
+h3 a:visited{
+  color: black;
+}
+h1 a:hover, h3 a:hover{
+  color: grey;
+}
+
+/**
+* sets borders into a single border. Margins are set to cover all width, since
+* it provides with important information.
+*/
+table{
+  width: 98%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 1em 1% 1em 1%;
+}
+th{
+  border: 1px solid grey;
+  padding: 0.7em;
+}
+
+form{
+  text-align: center;
+}
+textarea{
+  width:92%;
+}
+input{
+  width: 90%;
+  margin-bottom: 1em;
+}
+input:hover{
+  color: black;
+}
+
+/**
+* sets rules for image sizes to not ruin websites design.
+*/
+img{
+  width: 80%;
+  height: 80%;
+  margin: 1em;
+  max-width: 450px;
+  max-height: 450px;
+  min-width: 300px;
+}
+
+/**
+* creates a red orange rectangle at the top of the screen. absolute position
+* ensures the rectangle will be positioned at the top at all times, while
+* z-index ensures that rectangle will apear behind the menu (navigation) area.
+*/
+#rectangle{
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  padding-bottom: 2.5em;
+  background-color: rgb(255, 69, 0);
+  z-index: auto;
+}
+
+/**
+* for creating a blue <hr> line
+*/
+#line{
+  color: blue;
+}
+
+/**
+* creates a class for text to be not displayed.
+*/
+.answer{
+  display: none;
+  padding: 0;
+}
+.set-margin{
+  margin: 1em;
+  padding: 0;
+}
+
+/**
+* ensures that answer window/block has white background.
+*/
+.show-answers{
+  background-color: white;
+}
+
+/**
+* ensures that when text (parent) is hovered hidden text will be made to appear.
+*/
+li:hover + .answer{
+  display: inline-block;
+  margin: 1em;
+  padding: 0px 14px;
+}
+
+/**
+* fixes margin and padding for quiz page's hidden answers (for small devices),
+* in order for them to appear normally.
+*/
+@media screen and (max-width: 430px){
+  li:hover + .answer{
+    display: block;
+    margin: 1em 0;
+    padding: 0px 0px;
+  }
+}
+
+/**
+* sets desktop environment with flex-box layout. div elements will be displayed
+* in a row.
+*/
+@media screen and (min-width: 800px){
+  body{
+    text-align: center;
+    margin: auto;
+  }
+
+  /**
+  * makes maximum body width 1300px and makes it wrap in a row.
+  */
+  main{
+    flex-flow: row wrap;
+    max-width:1300px;
+    margin: auto;
+  }
+
+  /**
+  * ensures that div will be certain sizes
+  */
+  div{
+    text-align: left;
+    margin: auto;
+    width: 45%;
+    min-width: 300px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  h1{
+    text-align: center;
+    position: relative;
+  }
+  nav{
+    text-align: center;
+  }
+  li{
+    float: none;
+    display: inline-block;
+  }
+}
